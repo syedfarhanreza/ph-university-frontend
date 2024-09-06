@@ -8,6 +8,14 @@ import AcademicFaculty from "../pages/admin/academicManagement/AcademicFaculty";
 import CreateAcademicFaculty from "../pages/admin/academicManagement/CreateAcademicFaculty";
 import AcademicDepartment from "../pages/admin/academicManagement/AcademicDepartment";
 import CreateAcademicDepartment from "../pages/admin/academicManagement/CreateAcademicDepartment";
+import StudentData from "../pages/admin/userManagement/StudentData";
+import StudentDetails from "../pages/admin/userManagement/StudentDetails";
+import SemesterRegistration from "../pages/admin/courseManagement/SemesterRegistration";
+import RegisteredSemesters from "../pages/admin/courseManagement/RegisteredSemesters";
+import CreateCourse from "../pages/admin/courseManagement/CreateCourse";
+import Courses from "../pages/admin/courseManagement/Courses";
+import OfferCourse from "../pages/admin/courseManagement/OfferCourse";
+import OfferedCourse from "../pages/admin/courseManagement/OfferedCourse";
 
 export const adminPaths = [
   {
@@ -54,6 +62,20 @@ export const adminPaths = [
     name: "User Management",
     children: [
       {
+        name: "Create Student",
+        path: "create-student",
+        element: <CreateStudent></CreateStudent>,
+      },
+      {
+        name: "Students",
+        path: "students-data",
+        element: <StudentData></StudentData>,
+      },
+      {
+        path: "student-data/:studentId",
+        element: <StudentDetails></StudentDetails>,
+      },
+      {
         name: "Create Admin",
         path: "create-admin",
         element: <CreateAdmin></CreateAdmin>,
@@ -63,10 +85,40 @@ export const adminPaths = [
         path: "create-faculty",
         element: <CreateFaculty></CreateFaculty>,
       },
+    ],
+  },
+  {
+    name: "Course Management",
+    children: [
       {
-        name: "Create Student",
-        path: "create-student",
-        element: <CreateStudent></CreateStudent>,
+        name: "Semester Registration",
+        path: "semester-registration",
+        element: <SemesterRegistration />,
+      },
+      {
+        name: "Registered Semesters",
+        path: "registered-semesters",
+        element: <RegisteredSemesters />,
+      },
+      {
+        name: "Create Course",
+        path: "create-course",
+        element: <CreateCourse />,
+      },
+      {
+        name: "Courses",
+        path: "courses",
+        element: <Courses />,
+      },
+      {
+        name: "Offer Course",
+        path: "offer-course",
+        element: <OfferCourse />,
+      },
+      {
+        name: "Offered Courses",
+        path: "offered-courses",
+        element: <OfferedCourse />,
       },
     ],
   },
