@@ -28,6 +28,7 @@ const PHForm = ({
   if (defaultValues) {
     formConfig["defaultValues"] = defaultValues;
   }
+
   if (resolver) {
     formConfig["resolver"] = resolver;
   }
