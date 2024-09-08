@@ -4,7 +4,7 @@ export type TError = {
   data: {
     message: string;
     stack: string;
-    success: number;
+    success: boolean;
   };
   status: number;
 };
